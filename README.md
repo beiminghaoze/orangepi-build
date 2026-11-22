@@ -21,3 +21,14 @@ Soc | Boards |
 
 ## Supported Host Systems
 - Ubuntu 22.04
+
+## Compile
+1.安装依赖
+```bash
+sudo apt update && sudo apt install -y \
+  git build-essential bc bison flex libssl-dev libelf-dev \
+  device-tree-compiler u-boot-tools kpartx dosfstools parted \
+  pigz pv rsync unzip wget curl ca-certificates jq python3 \
+  debootstrap qemu-user-static binfmt-support
+```
+2.执行 ./build.sh 并选择（orangepizero3、Full OS image for flashing、默认内核配置、next、resolute、精简控制台镜像、Standard版本）
